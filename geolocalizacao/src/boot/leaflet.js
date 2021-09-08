@@ -10,10 +10,10 @@ import App from '../App.vue'
 
 const app = createApp(App)
 
-app.use('l-map', LMap)
-app.use('l-tile-layer', LTileLayer)
-app.use('l-marker', LMarker)
-app.use('l-tile-layer', LGeoJson)
+app.component('l-map', LMap)
+app.component('l-tile-layer', LTileLayer)
+app.component('l-marker', LMarker)
+app.component('l-geo-json', LGeoJson)
 
 delete Icon.Default.prototype._getIconUrl
 Icon.Default.mergeOptions({
